@@ -1,0 +1,42 @@
+:root{
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --muted: #6b6f76;
+  --accent: #7c4dff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#111}
+
+.site-header{padding:28px 20px 8px 20px; text-align:center}
+.site-header h1{margin:0;font-size:1.6rem}
+.tag{color:var(--muted); margin-top:6px}
+
+.container{display:flex; gap:20px; padding:24px; max-width:1100px; margin:0 auto}
+.player-card{flex:2; background:var(--card); border-radius:12px; padding:20px; box-shadow:0 6px 18px rgba(20,20,60,0.06)}
+.sidebar{flex:1}
+.cover{height:280px; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:8px; margin-bottom:16px}
+.cover img{width:100%; height:100%; object-fit:cover}
+.track-info h2{margin:0 0 6px 0}
+.track-info p{margin:0; color:var(--muted)}
+.controls{display:flex; gap:12px; justify-content:center; margin:14px 0}
+.btn{background:var(--accent); color:white; border:none; padding:10px 16px; border-radius:8px; cursor:pointer; font-size:1.1rem}
+.progress{display:flex; gap:12px; align-items:center}
+#seek{flex:1}
+.playlist{margin-top:18px}
+.playlist .item{display:flex; gap:12px; padding:10px; align-items:center; border-radius:8px; cursor:pointer}
+.playlist .item:hover{background:#f3f0ff}
+.playlist .item .meta{flex:1}
+.playlist .item .meta h4{margin:0}
+.playlist .item .meta p{margin:0;color:var(--muted);font-size:0.9rem}
+.playlist .item .dur{color:var(--muted);font-size:0.85rem}
+.site-footer{text-align:center;padding:20px;color:var(--muted)}
+
+/* responsive */
+@media (max-width:900px){
+  .container{flex-direction:column}
+  .cover{height:220px}
+}
+
+/* dark mode */
+body.dark{--bg:#0f1115; --card:#111214; --muted:#9aa0a6; --accent:#7c4dff; color:#e8eef8}
+body.dark .btn{background:linear-gradient(90deg,#7c4dff,#5da1ff)}

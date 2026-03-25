@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Music — Simple Music Player</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>My Music</h1>
+    <p class="tag">A simple, responsive music player</p>
+  </header>
+
+  <main class="container">
+    <section class="player-card">
+      <div class="cover" id="cover">
+        <img src="assets/cover1.jpg" alt="cover" id="cover-img">
+      </div>
+
+      <div class="track-info">
+        <h2 id="track-title">Title</h2>
+        <p id="track-artist">Artist</p>
+      </div>
+
+      <audio id="audio" preload="metadata"></audio>
+
+      <div class="controls">
+        <button id="prev" class="btn">⟨</button>
+        <button id="play" class="btn">▶</button>
+        <button id="next" class="btn">⟩</button>
+      </div>
+
+      <div class="progress">
+        <span id="current">0:00</span>
+        <input type="range" id="seek" value="0" min="0" max="100">
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="playlist" id="playlist">
+        <!-- playlist items injected by JS -->
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <h3>Up Next</h3>
+      <ul id="upnext"></ul>
+
+      <div class="theme-toggle">
+        <label>
+          <input type="checkbox" id="darkToggle"> Dark Mode
+        </label>
+      </div>
+
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with &hearts; — Static demo</p>
+  </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
